@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Temperature Dashboard
+
+Welcome to the Temperature Dashboard! This project was developed to showcase my skills in building a full-stack application using modern technologies.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [APIs](#apis)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+
+## Introduction
+
+Hi, my name is Prabin, and you are welcome to my portfolio show. I built this project after being selected for an interview to demonstrate my skills relevant to the job.
+
+This application utilizes MongoDB as the database, hosted on Atlas, and has a backend built with Node.js and TypeScript.
+
+## Technologies Used
+
+- **Frontend:** Next.js
+- **Backend:** Node.js, TypeScript
+- **Database:** MongoDB (hosted on Atlas)
+- **Charting Library:** Plotly
+
+## Features
+
+- Visualize temperature data across different locations.
+- Filter data by location and date range.
+- Interactive dashboard with various chart types (line, bar, box).
+
+## APIs
+
+I created three main APIs for this application:
+
+1. **API 1:** Fetches temperature data for the last N days.
+
+   - **Endpoint:** `/api/temperature/`
+   - **Description:** Retrieves temperature data for all location and all dates range.
+
+2. **API 2:** Aggregates and returns temperature statistics by date range and location.
+
+   - **Endpoint:** `/api/temperature/range?startDate=2024-10-01&endDate=2024-10-20&location=Melbourne`
+   - **Description:** Provides daily temperatures data for a specified date range and location.
+
+3. **API 3:** Provides metadata and configuration for the temperature visualization.
+   - **Endpoint:** `/api/temperature/last?last=7days&location=Melbourne`
+   - **Description:** Returns daily temperature data for specified location in the last N days.
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/prabinkc2046/TemperatureDashboard_Frontend_NextJS.git
+   cd temperature-dashboard
+   ```
+
+2. **Install dependencies:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
