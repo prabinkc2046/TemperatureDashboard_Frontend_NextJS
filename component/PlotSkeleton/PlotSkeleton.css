@@ -1,0 +1,51 @@
+/* PlotSkeleton.css */
+.skeleton-plot-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual bar styles */
+.skeleton-bar {
+  width: 15%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s infinite ease-in-out;
+}
+
+/* Different heights for each bar to resemble a chart */
+.skeleton-bar:nth-child(1) {
+  height: 60%;
+}
+.skeleton-bar:nth-child(2) {
+  height: 80%;
+}
+.skeleton-bar:nth-child(3) {
+  height: 40%;
+}
+.skeleton-bar:nth-child(4) {
+  height: 70%;
+}
+.skeleton-bar:nth-child(5) {
+  height: 50%;
+}
+
+/* Pulsing animation */
+@keyframes skeleton-pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

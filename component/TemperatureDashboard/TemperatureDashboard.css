@@ -1,0 +1,164 @@
+/* Fullscreen styling for the dashboard */
+.temperature-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Changed to flex-start to prevent vertical centering shifts */
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #4a90e2, #50e3c2);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent any overflow causing scrollbars */
+}
+
+/* Heading */
+.temperature-dashboard h2 {
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Control panel styling */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  min-height: 100px; /* Fixed height to match skeleton */
+}
+
+/* Each control (label and select) */
+.controls label {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Select dropdowns styling */
+.controls select {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  color: #4a90e2;
+  font-size: 1rem;
+}
+
+/* Plot container */
+.plot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  min-height: 400px; /* Fixed height to match skeleton */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Ensure responsiveness on smaller screens */
+@media (max-width: 600px) {
+  .temperature-dashboard h2 {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px; /* Adjusted for mobile */
+  }
+
+  .controls label {
+    font-size: 0.8rem;
+  }
+
+  .plot-container {
+    padding: 10px;
+    min-height: 300px; /* Adjusted for mobile */
+  }
+}
+
+/* Skeleton Loader Styles */
+.skeleton * {
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Skeleton title */
+.skeleton-title {
+  width: 60%;
+  height: 24px; /* Slightly larger for better matching */
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+/* Skeleton controls */
+.skeleton-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+  padding: 20px;
+  min-height: 100px; /* Match the controls min-height */
+}
+
+/* Each skeleton label */
+.skeleton-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100px;
+}
+
+/* Skeleton input */
+.skeleton-input {
+  width: 100%;
+  height: 35px; /* Match the select height */
+  border-radius: 4px;
+}
+
+/* Skeleton chart area */
+.skeleton-plot {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px; /* Match the plot-container min-height */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adjustments for mobile skeleton */
+@media (max-width: 600px) {
+  .skeleton-plot {
+    height: 300px;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
