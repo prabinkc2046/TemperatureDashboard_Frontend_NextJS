@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Plot from '../PlotlyWrapper/PlotlyWrapper';
+import TemperatureControls from '../TemperatureControls/TemperatureControls';
 import TemperatureDashboardSkeleton from '../TemperatureDashboardSkeleton/TemperatureDashboardSkeleton';
 import './TemperatureDashboard.css';
 
@@ -91,6 +92,19 @@ const TemperatureDashboard = () => {
     <div className="temperature-dashboard">
       <h2>Temperature Dashboard</h2>
 
+      <TemperatureControls
+        selectedCity={selectedCity}
+        setLastDays={setLastDays}
+        lastDays={lastDays}
+        setPlotType={setPlotType}
+        setSelectedCity={setSelectedCity}
+        setMetric={setMetric}
+        lastData={lastData}
+        metric={metric}
+        plotType={plotType}
+      />
+      {/* <h2>Temperature Dashboard</h2>
+
       <div className="controls">
         <label>
           Select City:
@@ -139,7 +153,7 @@ const TemperatureDashboard = () => {
             <option value="avg">Avg</option>
           </select>
         </label>
-      </div>
+      </div> */}
 
       <div className="plot-container">
         <Plot

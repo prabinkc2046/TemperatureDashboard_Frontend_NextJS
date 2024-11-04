@@ -44,6 +44,7 @@
   flex-direction: column;
   color: #ffffff;
   font-size: 0.9rem;
+  min-width: 120px; /* Ensure consistent width */
 }
 
 /* Select dropdowns styling */
@@ -55,6 +56,10 @@
   background-color: #ffffff;
   color: #4a90e2;
   font-size: 1rem;
+  min-width: 120px; /* Fixed width for consistency */
+  height: 40px; /* Fixed height for dropdowns */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
 }
 
 /* Plot container */
@@ -161,4 +166,31 @@
   100% {
     background-color: rgba(255, 255, 255, 0.1);
   }
+}
+
+/* Existing styles remain unchanged */
+
+/* Custom date range styling */
+.controls label input[type='date'] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  color: #4a90e2;
+  font-size: 1rem;
+}
+
+.controls button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.controls button:hover {
+  background-color: #3a7cb3; /* Slightly darker on hover */
 }
