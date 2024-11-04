@@ -7,19 +7,7 @@ import Plot from '../PlotlyWrapper/PlotlyWrapper';
 import TemperatureControls from '../TemperatureControls/TemperatureControls';
 import TemperatureDashboardSkeleton from '../TemperatureDashboardSkeleton/TemperatureDashboardSkeleton';
 import './TemperatureDashboard.css';
-
-const fetchLastTemperatureData = async (lastDays, location) => {
-  const url = location
-    ? `https://temperaturedashboard-backend-nodejs.onrender.com/api/temperature/last?last=${lastDays}&location=${location}`
-    : `https://temperaturedashboard-backend-nodejs.onrender.com/api/temperature/last?last=${lastDays}`;
-
-  try {
-    const response = await axios.get(url);
-    return response.data;
-  } catch (error) {
-    handleError(error);
-  }
-};
+import { fetchLastTemperatureData } from '@/utils/fetchLastTemperatureData';
 
 const handleError = error => {
   if (error.response) {
